@@ -29,22 +29,22 @@ function Home(props) {
     newproduct.splice(newlist, 1);
     setproduct(newproduct);
   }
-  function invalue(para) {
-    console.log(product);
-    var newinput = {
-      name: para,
-      id: product.length + 1,
-    };
+  // function invalue(para) {
+  //   console.log(product);
+  //   var newinput = {
+  //     name: para,
+  //     id: product.length + 1,
+  //   };
 
-    var productnew = [...product];
-    productnew.push(newinput);
-    console.log(productnew);
-    setproduct(productnew);
-  }
+  //   var productnew = [...product];
+  //   productnew.push(newinput);
+  //   console.log(productnew);
+  //   setproduct(productnew);
+  // }
   return (
     <div>
-      <Form outvalue={invalue} />
-      <List outlist={inlist} />
+      <Form />
+      <List outputproduct={product} outlist={inlist} />
     </div>
   );
 }

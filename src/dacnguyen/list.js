@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import "./css.css";
+import { connect } from "react-redux";
+
 List.propTypes = {
   outputproduct: PropTypes.array,
   outlist: PropTypes.func,
@@ -25,10 +26,9 @@ function List(props) {
     </div>
   );
 }
-const statetoprops = (state) => {
+var stateToProps = (state) => {
   return {
     outputproduct: state.list,
   };
 };
-
-export default connect(statetoprops)(List);
+export default connect(stateToProps)(List);

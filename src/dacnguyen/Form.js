@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./css.css";
+import { connect } from "react-redux";
+import * as action from "./action2/action";
 Form.propTypes = {
   outvalue: PropTypes.func,
 };
@@ -15,7 +17,12 @@ function Form(props) {
     setvalue("");
   }
   function clicksave() {
-    outvalue(value);
+    console.log(value);
+    outvalue({
+      name: value,
+      id: Math.floor(Math.random() * 100000),
+      gia: "100nvd",
+    });
   }
   return (
     <div>
@@ -40,5 +47,15 @@ function Form(props) {
     </div>
   );
 }
+const stateToProps = (state) => {
+  return {};
+};
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    outvalue: (lists) => {
+      dispatch(action.addlists(lists));
+    },
+  };
+};
 
-export default Form;
+export default connect(stateToProps, mapDispatchToProps)(Form);
