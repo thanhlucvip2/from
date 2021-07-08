@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./css.css";
 import { connect } from "react-redux";
-import * as action from "./action2/action";
+import * as action from "./actions/action";
 Form.propTypes = {
   outvalue: PropTypes.func,
 };
@@ -17,12 +17,12 @@ function Form(props) {
     setvalue("");
   }
   function clicksave() {
-    console.log(value);
-    outvalue({
+    var newvalue = {
       name: value,
-      id: Math.floor(Math.random() * 100000),
-      gia: "100nvd",
-    });
+      gia: Math.floor(Math.random() * 1000 + 100) + ".000 VNĐ",
+      id: Math.floor(Math.random() * 1000 + 100),
+    };
+    outvalue(newvalue);
   }
   return (
     <div>
@@ -47,15 +47,15 @@ function Form(props) {
     </div>
   );
 }
-const stateToProps = (state) => {
+
+var statetoprops = (state) => {
   return {};
 };
-const mapDispatchToProps = (dispatch, props) => {
+var dispatchtoprops = (dispatch, state) => {
   return {
     outvalue: (lists) => {
-      dispatch(action.addlists(lists));
+      dispatch(action.addlist(lists));
     },
   };
 };
-
-export default connect(stateToProps, mapDispatchToProps)(Form);
+export default connect(statetoprops, dispatchtoprops)(Form);

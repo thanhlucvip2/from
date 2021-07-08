@@ -1,5 +1,6 @@
-import { combineReducers } from "redux";
 import list from "./list";
+import { combineReducers } from "redux";
+
 var myreducer = combineReducers({
   list,
 });

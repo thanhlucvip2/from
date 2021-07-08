@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./css.css";
 import { connect } from "react-redux";
-
+import * as action from "./actions/action";
 List.propTypes = {
   outputproduct: PropTypes.array,
   outlist: PropTypes.func,
@@ -18,7 +18,9 @@ function List(props) {
       {outputproduct.map((a) => {
         return (
           <h1 key={a.id} className="list-product container">
-            <p>{a.name}</p>
+            <p>Sản Phẩm : {a.name}</p>
+            <p>Giá : {a.gia}</p>
+            <p>ID là : {a.id}</p>
             <button onClick={() => clean(a)}>Clean</button>
           </h1>
         );
@@ -26,9 +28,17 @@ function List(props) {
     </div>
   );
 }
-var stateToProps = (state) => {
+
+const statetoprops = (state) => {
   return {
     outputproduct: state.list,
   };
 };
-export default connect(stateToProps)(List);
+const cleantoprops = (dispatch, state) => {
+  return {
+    outlist: (out) => {
+      dispatch(action.cleanlist(out));
+    },
+  };
+};
+export default connect(statetoprops, cleantoprops)(List);

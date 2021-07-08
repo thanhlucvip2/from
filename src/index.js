@@ -5,8 +5,9 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import myreducer from "./dacnguyen/reducers/index";
-const store = createStore(myreducer);
+import myreducer from "./dacnguyen/myreducers/index";
+var store = createStore(myreducer);
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
