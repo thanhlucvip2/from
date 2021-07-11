@@ -1,18 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./dacnguyen/home";
+import Home from "./demo/home";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import myreducer from "./dacnguyen/myreducers/index";
-var store = createStore(myreducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Home />
-    </Provider>
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );

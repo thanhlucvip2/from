@@ -1,0 +1,106 @@
+.demo1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.demo2 {
+  border: 2px black solid;
+  background-color: antiquewhite;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+.demo3 {
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: rgb(128, 128, 128);
+  border-radius: 20px;
+  outline: none;
+  padding: 15px;
+  color: chartreuse;
+  font-size: 20px;
+}
+.demo4 {
+  border: 2px black solid;
+  border-top: none;
+  padding: 10px;
+}
+.demo6 {
+  margin: 10px 10px;
+  background-color: brown;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  color: aliceblue;
+}
+.demo6:hover {
+  font-size: 30px;
+}
+.demo5 {
+  margin-left: 20%;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+.demo5:hover {
+  font-size: 30px;
+}
+.demo7 {
+  background-color: aqua;
+  border: 2px seagreen solid;
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+}
+.demo9 {
+  width: 50%;
+  height: 48px;
+  outline: none;
+  padding: 4px;
+}
+.demo8 {
+  border: 2px chocolate solid;
+  background-color: aquamarine;
+  padding: 10px;
+}
+.demo10 {
+  margin-left: 20%;
+  height: 48px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  font-size: 25px;
+  outline: none;
+}
+.demo11 {
+  border: 2px black solid;
+  width: 5%;
+  text-align: center;
+  height: 50px;
+}
+.demo12 {
+  border: 2px black solid;
+  width: 45%;
+  text-align: center;
+  height: 50px;
+}
+.demo13 {
+  border: 2px black solid;
+  width: 30%;
+  text-align: center;
+  height: 50px;
+}
+.demo14 {
+  border: 2px black solid;
+  width: 25%;
+  text-align: center;
+  height: 50px;
+}
+.demo15 {
+  padding: 10px;
+  background-color: aqua;
+  border: 2px saddlebrown solid;
+}
+.demo16 {
+  background-color: aquamarine;
+  border: 2px saddlebrown solid;
+  margin: 10px;
+}
